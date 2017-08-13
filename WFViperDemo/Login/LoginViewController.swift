@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
         self.view.addSubview(usernameTextField)
         self.view.addSubview(passwordTextField)
 
-        usernameTextField.text = "jayesh"
+        usernameTextField.text = "foo"
         passwordTextField.text = "password"
 
         self.button.addTarget(self, action: #selector(performLogin), for: .touchUpInside)

@@ -23,7 +23,7 @@ class DataManager: DataDownloader {
     func downloadItem(name: String, password: String) {
         let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {
-            if name == "jayesh" && password == "password" {
+            if name == "foo" && password == "password" {
                 self.listItemsInteractor?.itemDownloaded(user: User(username: name, password: "password"))
             } else {
                 self.listItemsInteractor?.itemDownloaded(user: nil)
