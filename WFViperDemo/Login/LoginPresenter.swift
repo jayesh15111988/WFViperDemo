@@ -8,20 +8,20 @@
 
 import UIKit
 
-protocol ListPresentorProtocol: class {
-    var view: PostListViewProtocol? { get set }
+protocol LoginPresentorProtocol: class {
+    var view: LoginViewProtocol? { get set }
     func executeFindItems(name: String, password: String)
     func showList(user: User)
     func itemDownloaded(user: User?)
 }
 
-class ListPresenter: ListPresentorProtocol {
+class LoginPresenter: LoginPresentorProtocol {
 
-    weak var view: PostListViewProtocol?
-    let interactor: ListItemsInteractor
-    let wireframe: WireFrameProtocol
+    weak var view: LoginViewProtocol?
+    let interactor: LoginInteractorProtocol
+    let wireframe: LoginWireframeProtocol
 
-    init(interactor: ListItemsInteractor, wireframe: WireFrameProtocol) {
+    init(interactor: LoginInteractorProtocol, wireframe: LoginWireframeProtocol) {
         self.interactor = interactor
         self.wireframe = wireframe
     }

@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol ListItemsInteractor: class {
-    var presenter: ListPresentorProtocol? { get set }
+protocol LoginInteractorProtocol: class {
+    var presenter: LoginPresentorProtocol? { get set }
     func findUpcomingItems(name: String, password: String)
     func itemDownloaded(user: User?)
 }
 
-class ListInteractor: ListItemsInteractor {
+class LoginInteractor: LoginInteractorProtocol {
 
     let dataManager: DataDownloader
-    weak var presenter: ListPresentorProtocol?
+    weak var presenter: LoginPresentorProtocol?
 
     init(dataManager: DataDownloader) {
         self.dataManager = dataManager

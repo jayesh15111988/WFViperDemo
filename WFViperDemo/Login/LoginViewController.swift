@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol PostListViewProtocol: class {
+protocol LoginViewProtocol: class {
     func showLoadingSpinner()
     func hideLoadingSpinner()
     func showUserWithSuccess(user: User)
     func showUserWithError(_ error: String)
 }
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    let presenter: ListPresentorProtocol
+    let presenter: LoginPresentorProtocol
     let activityIndicatorView: UIActivityIndicatorView
     var user: User?
     let loginSuccessfulLabel: UILabel
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     let usernameTextField: UITextField
     let passwordTextField: UITextField
 
-    init(presenter: ListPresentorProtocol) {
+    init(presenter: LoginPresentorProtocol) {
         self.presenter = presenter
         activityIndicatorView = UIActivityIndicatorView()
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
@@ -99,7 +99,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: PostListViewProtocol {
+extension LoginViewController: LoginViewProtocol {
     func showLoadingSpinner() {
         self.activityIndicatorView.startAnimating()
     }

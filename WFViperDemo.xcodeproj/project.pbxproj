@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E34D1FBC1F3FC16800D70D8F /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FBB1F3FC16800D70D8F /* ListInteractor.swift */; };
+		E34D1FBC1F3FC16800D70D8F /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FBB1F3FC16800D70D8F /* LoginInteractor.swift */; };
 		E34D1FBE1F3FC1F100D70D8F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FBD1F3FC1F100D70D8F /* DataManager.swift */; };
 		E34D1FC01F3FC2A700D70D8F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FBF1F3FC2A700D70D8F /* User.swift */; };
-		E34D1FC21F3FC41200D70D8F /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FC11F3FC41200D70D8F /* ListPresenter.swift */; };
-		E34D1FC41F3FE1AB00D70D8F /* ListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FC31F3FE1AB00D70D8F /* ListWireframe.swift */; };
+		E34D1FC21F3FC41200D70D8F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FC11F3FC41200D70D8F /* LoginPresenter.swift */; };
+		E34D1FC41F3FE1AB00D70D8F /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FC31F3FE1AB00D70D8F /* LoginWireframe.swift */; };
 		E34D1FC71F3FF9BE00D70D8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FC61F3FF9BE00D70D8F /* DetailViewController.swift */; };
 		E34D1FC91F3FF9F600D70D8F /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FC81F3FF9F600D70D8F /* UserDetails.swift */; };
 		E34D1FCB1F3FFA7900D70D8F /* DetailWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D1FCA1F3FFA7900D70D8F /* DetailWireframeProtocol.swift */; };
@@ -22,7 +22,7 @@
 		E3BC06E81F40C2B900D032CE /* FinalScreenInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC06E71F40C2B900D032CE /* FinalScreenInteractorProtocol.swift */; };
 		E3BC06EA1F40C6D600D032CE /* FinalScreenWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC06E91F40C6D600D032CE /* FinalScreenWireframeProtocol.swift */; };
 		E3DEA6B71F3B366E0066A356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEA6B61F3B366E0066A356 /* AppDelegate.swift */; };
-		E3DEA6B91F3B366E0066A356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEA6B81F3B366E0066A356 /* ViewController.swift */; };
+		E3DEA6B91F3B366E0066A356 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEA6B81F3B366E0066A356 /* LoginViewController.swift */; };
 		E3DEA6BC1F3B366E0066A356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DEA6BA1F3B366E0066A356 /* Main.storyboard */; };
 		E3DEA6BE1F3B366E0066A356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3DEA6BD1F3B366E0066A356 /* Assets.xcassets */; };
 		E3DEA6C11F3B366E0066A356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DEA6BF1F3B366E0066A356 /* LaunchScreen.storyboard */; };
@@ -40,11 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E34D1FBB1F3FC16800D70D8F /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		E34D1FBB1F3FC16800D70D8F /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		E34D1FBD1F3FC1F100D70D8F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E34D1FBF1F3FC2A700D70D8F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E34D1FC11F3FC41200D70D8F /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
-		E34D1FC31F3FE1AB00D70D8F /* ListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWireframe.swift; sourceTree = "<group>"; };
+		E34D1FC11F3FC41200D70D8F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		E34D1FC31F3FE1AB00D70D8F /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
 		E34D1FC61F3FF9BE00D70D8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E34D1FC81F3FF9F600D70D8F /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		E34D1FCA1F3FFA7900D70D8F /* DetailWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframeProtocol.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		E3BC06E91F40C6D600D032CE /* FinalScreenWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenWireframeProtocol.swift; sourceTree = "<group>"; };
 		E3DEA6B31F3B366E0066A356 /* WFViperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFViperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DEA6B61F3B366E0066A356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3DEA6B81F3B366E0066A356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3DEA6B81F3B366E0066A356 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3DEA6BB1F3B366E0066A356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3DEA6BD1F3B366E0066A356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3DEA6C01F3B366E0066A356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,10 +87,10 @@
 		E3BC06DE1F409D8F00D032CE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E3DEA6B81F3B366E0066A356 /* ViewController.swift */,
-				E34D1FBB1F3FC16800D70D8F /* ListInteractor.swift */,
-				E34D1FC11F3FC41200D70D8F /* ListPresenter.swift */,
-				E34D1FC31F3FE1AB00D70D8F /* ListWireframe.swift */,
+				E3DEA6B81F3B366E0066A356 /* LoginViewController.swift */,
+				E34D1FBB1F3FC16800D70D8F /* LoginInteractor.swift */,
+				E34D1FC11F3FC41200D70D8F /* LoginPresenter.swift */,
+				E34D1FC31F3FE1AB00D70D8F /* LoginWireframe.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -280,20 +280,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E34D1FBC1F3FC16800D70D8F /* ListInteractor.swift in Sources */,
+				E34D1FBC1F3FC16800D70D8F /* LoginInteractor.swift in Sources */,
 				E3BC06E81F40C2B900D032CE /* FinalScreenInteractorProtocol.swift in Sources */,
 				E34D1FCB1F3FFA7900D70D8F /* DetailWireframeProtocol.swift in Sources */,
 				E34D1FBE1F3FC1F100D70D8F /* DataManager.swift in Sources */,
 				E3BC06E61F40BFE900D032CE /* FinalScreenPresentorProtocol.swift in Sources */,
 				E34D1FC91F3FF9F600D70D8F /* UserDetails.swift in Sources */,
-				E34D1FC41F3FE1AB00D70D8F /* ListWireframe.swift in Sources */,
+				E34D1FC41F3FE1AB00D70D8F /* LoginWireframe.swift in Sources */,
 				E3BC06EA1F40C6D600D032CE /* FinalScreenWireframeProtocol.swift in Sources */,
 				E34D1FCD1F3FFAC600D70D8F /* DetailsPresenter.swift in Sources */,
 				E3BC06E41F40BF1C00D032CE /* FinalScreenViewController.swift in Sources */,
-				E3DEA6B91F3B366E0066A356 /* ViewController.swift in Sources */,
+				E3DEA6B91F3B366E0066A356 /* LoginViewController.swift in Sources */,
 				E34D1FCF1F3FFBF400D70D8F /* DetailsInteractor.swift in Sources */,
 				E34D1FC01F3FC2A700D70D8F /* User.swift in Sources */,
-				E34D1FC21F3FC41200D70D8F /* ListPresenter.swift in Sources */,
+				E34D1FC21F3FC41200D70D8F /* LoginPresenter.swift in Sources */,
 				E3DEA6B71F3B366E0066A356 /* AppDelegate.swift in Sources */,
 				E34D1FC71F3FF9BE00D70D8F /* DetailViewController.swift in Sources */,
 			);

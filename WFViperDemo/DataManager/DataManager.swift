@@ -11,13 +11,13 @@ import UIKit
 protocol DataDownloader: class {
     func downloadItem(name: String, password: String)
     func downloadItemsFor(name: String)
-    var listItemsInteractor: ListItemsInteractor? { get set }
+    var listItemsInteractor: LoginInteractorProtocol? { get set }
     var itemsDetailsInteractor: DetailsInteractorProtocol? { get set }
 }
 
 class DataManager: DataDownloader {
 
-    weak var listItemsInteractor: ListItemsInteractor?
+    weak var listItemsInteractor: LoginInteractorProtocol?
     weak var itemsDetailsInteractor: DetailsInteractorProtocol?
 
     func downloadItem(name: String, password: String) {

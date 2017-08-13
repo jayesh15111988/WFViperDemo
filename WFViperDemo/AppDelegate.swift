@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let dataManager: DataDownloader = DataManager()
-        let interactor: ListItemsInteractor = ListInteractor(dataManager: dataManager)
-        let wireFrame: WireFrameProtocol = ListWireframe()
-        let presenter: ListPresentorProtocol = ListPresenter(interactor: interactor, wireframe: wireFrame)
-        let vc: PostListViewProtocol & ViewController = ViewController(presenter: presenter)
+        let interactor: LoginInteractorProtocol = LoginInteractor(dataManager: dataManager)
+        let wireFrame: LoginWireframeProtocol = LoginWireframe()
+        let presenter: LoginPresentorProtocol = LoginPresenter(interactor: interactor, wireframe: wireFrame)
+        let vc: LoginViewProtocol & LoginViewController = LoginViewController(presenter: presenter)
         presenter.view = vc
         interactor.presenter = presenter
         dataManager.listItemsInteractor = interactor

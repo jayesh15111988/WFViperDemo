@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol WireFrameProtocol {
-    func presentPosts(view: PostListViewProtocol, user: User)
+protocol LoginWireframeProtocol {
+    func presentPosts(view: LoginViewProtocol, user: User)
 }
 
-class ListWireframe: WireFrameProtocol {
-    func presentPosts(view: PostListViewProtocol, user: User) {
+class LoginWireframe: LoginWireframeProtocol {
+    func presentPosts(view: LoginViewProtocol, user: User) {
         let dataManager: DataDownloader = DataManager()
         let interactor: DetailsInteractorProtocol = DetailsInteractor(dataManager: dataManager)
         let wireframe: DetailWireframeProtocol = DetailWireframe()
