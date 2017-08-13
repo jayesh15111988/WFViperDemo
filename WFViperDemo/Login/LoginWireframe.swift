@@ -17,7 +17,7 @@ class LoginWireframe: LoginWireframeProtocol {
         let dataManager: DataDownloader = DataManager()
         let interactor: DetailsInteractorProtocol = DetailsInteractor(dataManager: dataManager)
         let wireframe: DetailWireframeProtocol = DetailWireframe()
-        let detailsPresenter: DetailsPresenter = DetailsPresenterClass(interactor: interactor, wireframeProtocol: wireframe)
+        let detailsPresenter: DetailsPresenterProtocol = DetailsPresenter(interactor: interactor, wireframeProtocol: wireframe)
         let detailsVC: DetailViewProtocol = DetailViewController(detailsPresenter: detailsPresenter, user: user)
 
         interactor.presenter = detailsPresenter

@@ -18,7 +18,7 @@ protocol DetailViewProtocol: class {
 
 class DetailViewController: UIViewController {
 
-    let detailsPresenter: DetailsPresenter
+    let detailsPresenter: DetailsPresenterProtocol
     var userDetails: [String]
     let dismissButton: UIButton
     let loginButton: UIButton
@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     let namesLabel: UILabel
     let tableView: UITableView    
 
-    init(detailsPresenter: DetailsPresenter, user: User) {
+    init(detailsPresenter: DetailsPresenterProtocol, user: User) {
         self.detailsPresenter = detailsPresenter
         self.dismissButton = UIButton()
         self.dismissButton.translatesAutoresizingMaskIntoConstraints = false

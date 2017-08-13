@@ -9,14 +9,14 @@
 import Foundation
 
 protocol DetailsInteractorProtocol: class {
-    var presenter: DetailsPresenter? { get set }
+    var presenter: DetailsPresenterProtocol? { get set }
     func fetchDetails(user: User)
     func detailsForUserFetched(result: [String])
 }
 
 class DetailsInteractor: DetailsInteractorProtocol {
 
-    weak var presenter: DetailsPresenter?
+    weak var presenter: DetailsPresenterProtocol?
     let dataManager: DataDownloader
 
     init(dataManager: DataDownloader) {

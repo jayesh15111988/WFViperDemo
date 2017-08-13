@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol DetailsPresenter: class {
+protocol DetailsPresenterProtocol: class {
     var view: DetailViewProtocol? { get set }
     var selectedName: String? { get set }
     func presentDetails(user: User)
@@ -18,7 +18,7 @@ protocol DetailsPresenter: class {
     func dismiss()
 }
 
-class DetailsPresenterClass: DetailsPresenter {
+class DetailsPresenter: DetailsPresenterProtocol {
 
     weak var view: DetailViewProtocol?
     let interactor: DetailsInteractorProtocol
