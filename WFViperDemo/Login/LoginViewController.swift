@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
 
     let presenter: LoginPresentorProtocol
     let activityIndicatorView: UIActivityIndicatorView
-    var user: User?
     let loginSuccessfulLabel: UILabel
     let button: UIButton
     let usernameTextField: UITextField
@@ -81,7 +80,6 @@ class LoginViewController: UIViewController {
     }
 
     func showUserWithSuccess(user: User) {
-        self.user = user
         self.loginSuccessfulLabel.text = "Login Successful"
         let when = DispatchTime.now() + 1
         DispatchQueue.main.asyncAfter(deadline: when) {
@@ -94,8 +92,7 @@ class LoginViewController: UIViewController {
     }
 
     private func goToNextScreen() {
-        guard let user = user else { return }
-        self.presenter.showList(user: user)
+        self.presenter.showList()
     }
 }
 

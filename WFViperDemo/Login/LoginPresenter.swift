@@ -10,8 +10,9 @@ import UIKit
 
 protocol LoginPresentorProtocol: class {
     var view: LoginViewProtocol? { get set }
+    var user: User? { get set }
     func executeFindItems(name: String, password: String)
-    func showList(user: User)
+    func showList()
     func itemDownloaded(user: User?)
 }
 
@@ -20,6 +21,7 @@ class LoginPresenter: LoginPresentorProtocol {
     weak var view: LoginViewProtocol?
     let interactor: LoginInteractorProtocol
     let wireframe: LoginWireframeProtocol
+    var user: User?
 
     init(interactor: LoginInteractorProtocol, wireframe: LoginWireframeProtocol) {
         self.interactor = interactor
@@ -31,11 +33,16 @@ class LoginPresenter: LoginPresentorProtocol {
         self.interactor.findUpcomingItems(name: name, password: password)
     }
 
-    func showList(user: User) {
-        self.wireframe.presentPosts(view: view!, user: user)        
+    func showList() {
+        guard let user = self.user else {
+            self.view?.showUserWithError("User selected is nil, cannot proceed")
+            return
+        }
+        self.wireframe.presentPosts(view: view!, user: user)
     }
 
     func itemDownloaded(user: User?) {
+        self.user = user
         self.view?.hideLoadingSpinner()
         if let user = user {
             self.view?.showUserWithSuccess(user: user)

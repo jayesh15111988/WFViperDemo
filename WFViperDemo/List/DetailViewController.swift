@@ -18,15 +18,13 @@ protocol DetailViewProtocol: class {
 
 class DetailViewController: UIViewController {
 
-    let detailsPresenter: DetailsPresenterProtocol
-    var userDetails: [String]
+    let detailsPresenter: DetailsPresenterProtocol    
     let dismissButton: UIButton
     let loginButton: UIButton
-    let user: User
     let namesLabel: UILabel
     let tableView: UITableView    
 
-    init(detailsPresenter: DetailsPresenterProtocol, user: User) {
+    init(detailsPresenter: DetailsPresenterProtocol) {
         self.detailsPresenter = detailsPresenter
         self.dismissButton = UIButton()
         self.dismissButton.translatesAutoresizingMaskIntoConstraints = false
@@ -38,9 +36,7 @@ class DetailViewController: UIViewController {
         self.namesLabel.translatesAutoresizingMaskIntoConstraints = false
         self.namesLabel.textColor = .white
         self.tableView = UITableView()
-        self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.user = user
-        self.userDetails = []
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false                
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -69,7 +65,7 @@ class DetailViewController: UIViewController {
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[tableView]|", options: [], metrics: nil, views: views))
 
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-64-[dismissButton(44)]-[nameLabel(>=0)][tableView][loginButton(44)]-|", options: [], metrics: nil, views: views))
-        self.detailsPresenter.presentDetails(user: self.user)
+        self.detailsPresenter.presentDetails(user: self.detailsPresenter.user)
     }
 
     @objc private func moveToNextScreen() {
@@ -87,7 +83,6 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: DetailViewProtocol {
     func showDetails(userDetails: [String]) {
-        self.userDetails = userDetails
         self.tableView.reloadData()
     }
 
@@ -110,18 +105,18 @@ extension DetailViewController: DetailViewProtocol {
 
 extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.detailsPresenter.nameSelected(self.userDetails[indexPath.row])
+        self.detailsPresenter.indexSelected(indexPath.row)
     }
 }
 
 extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userDetails.count
+        return self.detailsPresenter.userDetails.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = userDetails[indexPath.row]
+        cell.textLabel?.text = self.detailsPresenter.userDetails[indexPath.row]
         return cell
     }
 }
