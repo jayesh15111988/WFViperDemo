@@ -11,13 +11,14 @@ import UIKit
 protocol LoginViewProtocol: class {
     func showLoadingSpinner()
     func hideLoadingSpinner()
-    func showUserWithSuccess(user: User)
+    func showUserWithSuccess(viewModel: LoginViewModel)
     func showUserWithError(_ error: String)
 }
 
 class LoginViewController: UIViewController {
 
     let presenter: LoginPresentorProtocol
+    var loginViewModel: LoginViewModel?
     let activityIndicatorView: UIActivityIndicatorView
     let loginSuccessfulLabel: UILabel
     let button: UIButton
@@ -79,8 +80,10 @@ class LoginViewController: UIViewController {
         self.presenter.executeFindItems(name: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 
-    func showUserWithSuccess(user: User) {
-        self.loginSuccessfulLabel.text = "Login Successful"
+    func showUserWithSuccess(viewModel: LoginViewModel) {
+        self.loginViewModel = viewModel
+        self.loginSuccessfulLabel.text = viewModel.successMessage
+        self.title = viewModel.titleMessage
         let when = DispatchTime.now() + 1
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.goToNextScreen()

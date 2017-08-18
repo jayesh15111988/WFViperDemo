@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FinalScreenUpdaterProtocol: class {
-    func showName()
+    func update(with viewModel: FinalScreenViewModel)
 }
 
 class FinalScreenViewController: UIViewController, FinalScreenUpdaterProtocol {
@@ -91,8 +91,10 @@ class FinalScreenViewController: UIViewController, FinalScreenUpdaterProtocol {
         self.presentor.appendName()
     }
 
-    func showName() {
-        self.label.text = self.presentor.currentName
+    func update(with viewModel: FinalScreenViewModel) {
+        print(viewModel.successMessage)
+        self.label.text = viewModel.resultMessage
+        self.title = viewModel.operationPerformed
     }
 
 }

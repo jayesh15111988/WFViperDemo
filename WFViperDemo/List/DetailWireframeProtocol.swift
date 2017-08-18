@@ -32,7 +32,7 @@ class DetailWireframe: DetailWireframeProtocol {
 
     func dismiss(view: DetailViewProtocol) {
         if let view = view as? UIViewController {
-            view.dismiss(animated: true, completion: nil)
+            view.navigationController?.popViewController(animated: true)
         }
     }
 }

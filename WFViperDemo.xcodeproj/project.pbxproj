@@ -21,6 +21,9 @@
 		E3BC06E61F40BFE900D032CE /* FinalScreenPresentorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC06E51F40BFE900D032CE /* FinalScreenPresentorProtocol.swift */; };
 		E3BC06E81F40C2B900D032CE /* FinalScreenInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC06E71F40C2B900D032CE /* FinalScreenInteractorProtocol.swift */; };
 		E3BC06EA1F40C6D600D032CE /* FinalScreenWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC06E91F40C6D600D032CE /* FinalScreenWireframeProtocol.swift */; };
+		E3D0191B1F470BA200C1F054 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0191A1F470BA100C1F054 /* LoginViewModel.swift */; };
+		E3D0191D1F470DDB00C1F054 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0191C1F470DDB00C1F054 /* DetailsViewModel.swift */; };
+		E3D0191F1F47120F00C1F054 /* FinalScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0191E1F47120F00C1F054 /* FinalScreenViewModel.swift */; };
 		E3DEA6B71F3B366E0066A356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEA6B61F3B366E0066A356 /* AppDelegate.swift */; };
 		E3DEA6B91F3B366E0066A356 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEA6B81F3B366E0066A356 /* LoginViewController.swift */; };
 		E3DEA6BC1F3B366E0066A356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DEA6BA1F3B366E0066A356 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		E3BC06E51F40BFE900D032CE /* FinalScreenPresentorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenPresentorProtocol.swift; sourceTree = "<group>"; };
 		E3BC06E71F40C2B900D032CE /* FinalScreenInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenInteractorProtocol.swift; sourceTree = "<group>"; };
 		E3BC06E91F40C6D600D032CE /* FinalScreenWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenWireframeProtocol.swift; sourceTree = "<group>"; };
+		E3D0191A1F470BA100C1F054 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E3D0191C1F470DDB00C1F054 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E3D0191E1F47120F00C1F054 /* FinalScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenViewModel.swift; sourceTree = "<group>"; };
 		E3DEA6B31F3B366E0066A356 /* WFViperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFViperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DEA6B61F3B366E0066A356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3DEA6B81F3B366E0066A356 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				E34D1FBB1F3FC16800D70D8F /* LoginInteractor.swift */,
 				E34D1FC11F3FC41200D70D8F /* LoginPresenter.swift */,
 				E34D1FC31F3FE1AB00D70D8F /* LoginWireframe.swift */,
+				E3D0191A1F470BA100C1F054 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 				E34D1FCA1F3FFA7900D70D8F /* DetailWireframeProtocol.swift */,
 				E34D1FCC1F3FFAC600D70D8F /* DetailsPresenter.swift */,
 				E34D1FCE1F3FFBF400D70D8F /* DetailsInteractor.swift */,
+				E3D0191C1F470DDB00C1F054 /* DetailsViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 				E3BC06E51F40BFE900D032CE /* FinalScreenPresentorProtocol.swift */,
 				E3BC06E71F40C2B900D032CE /* FinalScreenInteractorProtocol.swift */,
 				E3BC06E91F40C6D600D032CE /* FinalScreenWireframeProtocol.swift */,
+				E3D0191E1F47120F00C1F054 /* FinalScreenViewModel.swift */,
 			);
 			path = "Final Screen";
 			sourceTree = "<group>";
@@ -290,12 +299,15 @@
 				E3BC06EA1F40C6D600D032CE /* FinalScreenWireframeProtocol.swift in Sources */,
 				E34D1FCD1F3FFAC600D70D8F /* DetailsPresenter.swift in Sources */,
 				E3BC06E41F40BF1C00D032CE /* FinalScreenViewController.swift in Sources */,
+				E3D0191B1F470BA200C1F054 /* LoginViewModel.swift in Sources */,
 				E3DEA6B91F3B366E0066A356 /* LoginViewController.swift in Sources */,
 				E34D1FCF1F3FFBF400D70D8F /* DetailsInteractor.swift in Sources */,
 				E34D1FC01F3FC2A700D70D8F /* User.swift in Sources */,
 				E34D1FC21F3FC41200D70D8F /* LoginPresenter.swift in Sources */,
 				E3DEA6B71F3B366E0066A356 /* AppDelegate.swift in Sources */,
 				E34D1FC71F3FF9BE00D70D8F /* DetailViewController.swift in Sources */,
+				E3D0191F1F47120F00C1F054 /* FinalScreenViewModel.swift in Sources */,
+				E3D0191D1F470DDB00C1F054 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +464,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WFViperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wayfair.org.WFViperDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = sample.sample.WFViperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -468,7 +480,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WFViperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wayfair.org.WFViperDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = sample.sample.WFViperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

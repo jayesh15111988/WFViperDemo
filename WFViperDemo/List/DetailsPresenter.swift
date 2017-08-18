@@ -61,6 +61,7 @@ class DetailsPresenter: DetailsPresenterProtocol {
 
     func indexSelected(_ index: Int) {
         self.selectedName = self.userDetails[index]
-        self.view?.selectedNameUpdater()
+        guard let name = self.selectedName else { return }
+        self.view?.selectedNameUpdater(with: DetailsViewModel(successMessage: "Item Selected Successfully", selectedOptionTransform: "\(name) \(name)", dismissTitle: "Can't Dismiss now", nextScreenButtonTitle: "Ready to move to next screen", selectedOption: name))
     }
 }

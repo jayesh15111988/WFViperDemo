@@ -45,7 +45,7 @@ class LoginPresenter: LoginPresentorProtocol {
         self.user = user
         self.view?.hideLoadingSpinner()
         if let user = user {
-            self.view?.showUserWithSuccess(user: user)
+            self.view?.showUserWithSuccess(viewModel: LoginViewModel(user: user, successMessage: "Login Successful", titleMessage: "Welcome Back"))
         } else {
             self.view?.showUserWithError("Failed to get user object")
         }
