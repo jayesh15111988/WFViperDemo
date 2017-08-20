@@ -122,28 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WFViperDemo/Login/LoginViewController.swift"
-            timestampString = "524751021.462141"
+            timestampString = "524880871.856789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "goToNextScreen()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WFViperDemo/Login/LoginViewController.swift"
-            timestampString = "524751021.462336"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "showUserWithError(_:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "showUserWithSuccess(viewModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

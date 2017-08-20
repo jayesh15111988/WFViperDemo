@@ -80,20 +80,6 @@ class LoginViewController: UIViewController {
         self.presenter.executeFindItems(name: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 
-    func showUserWithSuccess(viewModel: LoginViewModel) {
-        self.loginViewModel = viewModel
-        self.loginSuccessfulLabel.text = viewModel.successMessage
-        self.title = viewModel.titleMessage
-        let when = DispatchTime.now() + 1
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.goToNextScreen()
-        }
-    }
-
-    func showUserWithError(_ error: String) {
-        self.loginSuccessfulLabel.text = error
-    }
-
     private func goToNextScreen() {
         self.presenter.showList()
     }
@@ -108,4 +94,19 @@ extension LoginViewController: LoginViewProtocol {
         self.activityIndicatorView.stopAnimating()
     }
 
+    func showUserWithSuccess(viewModel: LoginViewModel) {
+        self.loginViewModel = viewModel
+        self.loginSuccessfulLabel.text = viewModel.successMessage
+        self.title = viewModel.titleMessage
+        let when = DispatchTime.now() + 1
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.goToNextScreen()
+        }
+    }
+
+    func showUserWithError(_ error: String) {
+        self.loginSuccessfulLabel.text = error
+        self.title = ""
+        self.loginViewModel = nil
+    }
 }

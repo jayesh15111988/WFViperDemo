@@ -19,14 +19,17 @@ protocol LoginPresentorProtocol: class {
 class LoginPresenter: LoginPresentorProtocol {
 
     weak var view: LoginViewProtocol?
+    var user: User?
+
     let interactor: LoginInteractorProtocol
     let wireframe: LoginWireframeProtocol
-    var user: User?
 
     init(interactor: LoginInteractorProtocol, wireframe: LoginWireframeProtocol) {
         self.interactor = interactor
         self.wireframe = wireframe
     }
+}
+extension LoginPresenter {
 
     func executeFindItems(name: String, password: String) {
         self.view?.showLoadingSpinner()
